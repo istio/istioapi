@@ -52,9 +52,12 @@ message MeshConfig {
   reserved 30;
   reserved "sidecar_to_telemetry_session_affinity";
 
-  // Port on which Envoy should listen for incoming connections from
-  // other services. Default port is 15001.
+  // Port on which Envoy should listen for virtual outbound listener.
+  // Default port is 15001.
   int32 proxy_listen_port = 4;
+
+  // Port range on which Envoy should listen for virtual outbound listener.
+  PortRange proxy_outbound_listener_port_range = 54;
 
   // Port on which Envoy should listen for HTTP PROXY requests if set.
   int32 proxy_http_port = 5;
@@ -449,7 +452,7 @@ message MeshConfig {
   reserved "termination_drain_duration";
 
   // $hide_from_docs
-  // Next available field number: 54
+  // Next available field number: 55
 }
 
 // Resource describes the source of configuration
@@ -500,4 +503,9 @@ message Certificate {
   // The DNS names for the certificate. A certificate may contain
   // multiple DNS names.
   repeated string dns_names = 2;
+}
+
+message PortRange {
+  int32 start = 1;
+  int32 end = 2;
 }

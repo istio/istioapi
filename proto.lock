@@ -35999,6 +35999,11 @@
                 "type": "int32"
               },
               {
+                "id": 54,
+                "name": "proxy_outbound_listener_port_range",
+                "type": "PortRange"
+              },
+              {
                 "id": 5,
                 "name": "proxy_http_port",
                 "type": "int32"
@@ -36316,6 +36321,21 @@
                 "name": "dns_names",
                 "type": "string",
                 "is_repeated": true
+              }
+            ]
+          },
+          {
+            "name": "PortRange",
+            "fields": [
+              {
+                "id": 1,
+                "name": "start",
+                "type": "int32"
+              },
+              {
+                "id": 2,
+                "name": "end",
+                "type": "int32"
               }
             ]
           }
@@ -42870,60 +42890,6 @@
           {
             "name": "(gogoproto.sizer_all)",
             "value": "false"
-          }
-        ]
-      }
-    },
-    {
-      "protopath": "security:/:v1alpha1:/:ca.proto",
-      "def": {
-        "messages": [
-          {
-            "name": "IstioCertificateRequest",
-            "fields": [
-              {
-                "id": 1,
-                "name": "csr",
-                "type": "string"
-              },
-              {
-                "id": 3,
-                "name": "validity_duration",
-                "type": "int64"
-              }
-            ]
-          },
-          {
-            "name": "IstioCertificateResponse",
-            "fields": [
-              {
-                "id": 1,
-                "name": "cert_chain",
-                "type": "string",
-                "is_repeated": true
-              }
-            ]
-          }
-        ],
-        "services": [
-          {
-            "name": "IstioCertificateService",
-            "rpcs": [
-              {
-                "name": "CreateCertificate",
-                "in_type": "IstioCertificateRequest",
-                "out_type": "IstioCertificateResponse"
-              }
-            ]
-          }
-        ],
-        "package": {
-          "name": "istio.v1.auth"
-        },
-        "options": [
-          {
-            "name": "go_package",
-            "value": "istio.io/api/security/v1alpha1"
           }
         ]
       }

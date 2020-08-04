@@ -5,7 +5,7 @@ location: https://istio.io/docs/reference/config/istio.mesh.v1alpha1.html
 layout: protoc-gen-docs
 generator: protoc-gen-docs
 weight: 20
-number_of_entries: 25
+number_of_entries: 26
 ---
 <p>Configuration affecting the service mesh as a whole.</p>
 
@@ -630,8 +630,19 @@ tracing configuration).</p>
 <td><code>proxyListenPort</code></td>
 <td><code>int32</code></td>
 <td>
-<p>Port on which Envoy should listen for incoming connections from
-other services. Default port is 15001.</p>
+<p>Port on which Envoy should listen for virtual outbound listener.
+Default port is 15001.</p>
+
+</td>
+<td>
+No
+</td>
+</tr>
+<tr id="MeshConfig-proxy_outbound_listener_port_range">
+<td><code>proxyOutboundListenerPortRange</code></td>
+<td><code><a href="#PortRange">PortRange</a></code></td>
+<td>
+<p>Port range on which Envoy should listen for virtual outbound listener.</p>
 
 </td>
 <td>
@@ -1237,6 +1248,39 @@ No
 <p>The DNS names for the certificate. A certificate may contain
 multiple DNS names.</p>
 
+</td>
+<td>
+No
+</td>
+</tr>
+</tbody>
+</table>
+</section>
+<h2 id="PortRange">PortRange</h2>
+<section>
+<table class="message-fields">
+<thead>
+<tr>
+<th>Field</th>
+<th>Type</th>
+<th>Description</th>
+<th>Required</th>
+</tr>
+</thead>
+<tbody>
+<tr id="PortRange-start">
+<td><code>start</code></td>
+<td><code>int32</code></td>
+<td>
+</td>
+<td>
+No
+</td>
+</tr>
+<tr id="PortRange-end">
+<td><code>end</code></td>
+<td><code>int32</code></td>
+<td>
 </td>
 <td>
 No

@@ -27,9 +27,12 @@
             "$ref": "#/components/schemas/istio.mesh.v1alpha1.MeshConfig.OutboundTrafficPolicy"
           },
           "proxyListenPort": {
-            "description": "Port on which Envoy should listen for incoming connections from other services. Default port is 15001.",
+            "description": "Port on which Envoy should listen for virtual outbound listener. Default port is 15001.",
             "type": "integer",
             "format": "int32"
+          },
+          "proxyOutboundListenerPortRange": {
+            "$ref": "#/components/schemas/istio.mesh.v1alpha1.PortRange"
           },
           "proxyHttpPort": {
             "description": "Port on which Envoy should listen for HTTP PROXY requests if set.",
@@ -179,6 +182,19 @@
             "description": "If enabled, Istio agent will merge metrics exposed by the application with metrics from Envoy and Istio agent. The sidecar injection will replace `prometheus.io` annotations present on the pod and redirect them towards Istio agent, which will then merge metrics of from the application with Istio metrics. This relies on the annotations `prometheus.io/scrape`, `prometheus.io/port`, and `prometheus.io/path` annotations. If you are running a separately managed Envoy with an Istio sidecar, this may cause issues, as the metrics will collide. In this case, it is recommended to disable aggregation on that deployment with the `prometheus.istio.io/merge-metrics: \"false\"` annotation. If not specified, this will be enabled by default.",
             "type": "boolean",
             "nullable": true
+          }
+        }
+      },
+      "istio.mesh.v1alpha1.PortRange": {
+        "type": "object",
+        "properties": {
+          "start": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "end": {
+            "type": "integer",
+            "format": "int32"
           }
         }
       },
