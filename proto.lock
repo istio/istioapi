@@ -35999,6 +35999,11 @@
                 "type": "int32"
               },
               {
+                "id": 54,
+                "name": "proxy_outbound_listener_port_range",
+                "type": "PortRange"
+              },
+              {
                 "id": 5,
                 "name": "proxy_http_port",
                 "type": "int32"
@@ -36316,6 +36321,21 @@
                 "name": "dns_names",
                 "type": "string",
                 "is_repeated": true
+              }
+            ]
+          },
+          {
+            "name": "PortRange",
+            "fields": [
+              {
+                "id": 1,
+                "name": "start",
+                "type": "int32"
+              },
+              {
+                "id": 2,
+                "name": "end",
+                "type": "int32"
               }
             ]
           }
