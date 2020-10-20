@@ -40194,6 +40194,31 @@
                 "type": "google.protobuf.UInt32Value"
               },
               {
+                "id": 8,
+                "name": "enforcing_consecutive_5xx",
+                "type": "google.protobuf.UInt32Value"
+              },
+              {
+                "id": 9,
+                "name": "enforcing_consecutive_gateway_failure",
+                "type": "google.protobuf.UInt32Value"
+              },
+              {
+                "id": 10,
+                "name": "split_external_local_origin_errors",
+                "type": "bool"
+              },
+              {
+                "id": 11,
+                "name": "consecutive_local_origin_failure",
+                "type": "google.protobuf.UInt32Value"
+              },
+              {
+                "id": 12,
+                "name": "enforcing_consecutive_local_origin_failure",
+                "type": "google.protobuf.UInt32Value"
+              },
+              {
                 "id": 2,
                 "name": "interval",
                 "type": "google.protobuf.Duration"
