@@ -34517,6 +34517,16 @@
                 "id": 6,
                 "name": "sni",
                 "type": "string"
+              },
+              {
+                "id": 8,
+                "name": "auto_sni",
+                "type": "bool"
+              },
+              {
+                "id": 9,
+                "name": "auto_san",
+                "type": "bool"
               }
             ]
           },
