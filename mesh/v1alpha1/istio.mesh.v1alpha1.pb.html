@@ -822,6 +822,21 @@ The certificate is retrieved from the endpoint.</p>
 No
 </td>
 </tr>
+<tr id="MeshConfig-CertificateData-trust_domains">
+<td><code>trustDomains</code></td>
+<td><code>string[]</code></td>
+<td>
+<p>Optional. Specify the list of trust domains to which this certificate data belongs.
+If set, they are used for this root CA. Otherwise, this root CA is used for default trust domain
+and its aliases.
+Note that we can have multiple certificate data for a same trust_domain.
+In that case, certificates with a same trust domain will be merged and used together to verify peer certificates.</p>
+
+</td>
+<td>
+No
+</td>
+</tr>
 </tbody>
 </table>
 </section>
