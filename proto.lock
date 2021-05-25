@@ -32795,6 +32795,18 @@
             ]
           },
           {
+            "name": "MultiRootCA.Mode",
+            "enum_fields": [
+              {
+                "name": "SELF_SIGNED"
+              },
+              {
+                "name": "PLUGIN",
+                "integer": 1
+              }
+            ]
+          },
+          {
             "name": "OpenCensusAgentTracingProvider.TraceContext",
             "enum_fields": [
               {
@@ -33204,6 +33216,36 @@
                     "id": 4,
                     "name": "istiod_side",
                     "type": "bool"
+                  },
+                  {
+                    "id": 5,
+                    "name": "multi_root_ca_setting",
+                    "type": "MultiRootCA"
+                  }
+                ]
+              },
+              {
+                "name": "MultiRootCA",
+                "fields": [
+                  {
+                    "id": 1,
+                    "name": "enabled",
+                    "type": "bool"
+                  },
+                  {
+                    "id": 2,
+                    "name": "mode",
+                    "type": "Mode"
+                  }
+                ],
+                "maps": [
+                  {
+                    "key_type": "string",
+                    "field": {
+                      "id": 3,
+                      "name": "tenant_secret_ttl",
+                      "type": "google.protobuf.Duration"
+                    }
                   }
                 ]
               },
