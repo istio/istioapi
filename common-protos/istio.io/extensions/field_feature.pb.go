@@ -23,8 +23,12 @@ var _ = math.Inf
 // proto package needs to be updated.
 const _ = proto.GoGoProtoPackageIsVersion3 // please upgrade the proto package
 
-// These options should be used during schema definition,
-// applying them to some of the fields in protobuf
+// These options should be used during schema definition, applying them to some of the fields in protobuf
+// Below are 2 proposal docs, 1 related repo and 1 PR for this repo:
+// Istio Proto API Feature Status: https://docs.google.com/document/d/1ZcTIdHYNnLpwgLJa8tWg0YwsyHAmc_4lXguLmMQvAj0/edit?usp=sharing&resourcekey=0-6OWzJ5cnlh_oYl4gFMbOuA
+// Feature Status: https://docs.google.com/document/d/1UIRgbugkB-EeflymS0McGxbuPAuEYOuE1D5e2ZSL2DE/edit?usp=sharing
+// Repo: https://github.com/istio/enhancements
+// Repo PR: https://github.com/istio/enhancements/pull/88
 type IstioFeature struct {
 	// Types that are valid to be assigned to XStatus:
 	//	*IstioFeature_Status

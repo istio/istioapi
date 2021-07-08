@@ -25,10 +25,20 @@ extend google.protobuf.FieldOptions {
 	IstioFeature feature = 1300;
 }
 
-// These options should be used during schema definition,
-// applying them to some of the fields in protobuf
+// These options should be used during schema definition, applying them to some of the fields in protobuf
+// Below are 2 proposal docs, 1 related repo and 1 PR for this repo:
+// Istio Proto API Feature Status: https://docs.google.com/document/d/1ZcTIdHYNnLpwgLJa8tWg0YwsyHAmc_4lXguLmMQvAj0/edit?usp=sharing&resourcekey=0-6OWzJ5cnlh_oYl4gFMbOuA
+// Feature Status: https://docs.google.com/document/d/1UIRgbugkB-EeflymS0McGxbuPAuEYOuE1D5e2ZSL2DE/edit?usp=sharing
+// Repo: https://github.com/istio/enhancements
+// Repo PR: https://github.com/istio/enhancements/pull/88
 message IstioFeature {
+	// label the feature's status, available status values may be alpha, beta and stable 
+	// there woulbe be experimental in future.
 	optional string status = 1;
+	// show the feature field for specified resource, such as vs-export-to shows the virtualservice's field export_to,
+	// it can be defined by feature ownner.
 	optional string name = 2;
+	// id means the feature id which can be mapped here: https://github.com/istio/enhancements/blob/master/features.yaml
+	// it should be contained in id section of features under this yaml file.
 	optional string id = 3;
 }

@@ -6,8 +6,12 @@ number_of_entries: 1
 ---
 <h2 id="IstioFeature">IstioFeature</h2>
 <section>
-<p>These options should be used during schema definition,
-applying them to some of the fields in protobuf</p>
+<p>These options should be used during schema definition, applying them to some of the fields in protobuf
+Below are 2 proposal docs, 1 related repo and 1 PR for this repo:
+Istio Proto API Feature Status: https://docs.google.com/document/d/1ZcTIdHYNnLpwgLJa8tWg0YwsyHAmc<em>4lXguLmMQvAj0/edit?usp=sharing&amp;resourcekey=0-6OWzJ5cnlh</em>oYl4gFMbOuA
+Feature Status: https://docs.google.com/document/d/1UIRgbugkB-EeflymS0McGxbuPAuEYOuE1D5e2ZSL2DE/edit?usp=sharing
+Repo: https://github.com/istio/enhancements
+Repo PR: https://github.com/istio/enhancements/pull/88</p>
 
 <table class="message-fields">
 <thead>
@@ -23,6 +27,9 @@ applying them to some of the fields in protobuf</p>
 <td><code>status</code></td>
 <td><code>string (oneof)</code></td>
 <td>
+<p>label the feature&rsquo;s status, available status values may be alpha, beta and stable
+there woulbe be experimental in future.</p>
+
 </td>
 <td>
 No
@@ -32,6 +39,9 @@ No
 <td><code>name</code></td>
 <td><code>string (oneof)</code></td>
 <td>
+<p>show the feature field for specified resource, such as vs-export-to shows the virtualservice&rsquo;s field export_to,
+it can be defined by feature ownner.</p>
+
 </td>
 <td>
 No
@@ -41,6 +51,9 @@ No
 <td><code>id</code></td>
 <td><code>string (oneof)</code></td>
 <td>
+<p>id means the feature id which can be mapped here: https://github.com/istio/enhancements/blob/master/features.yaml
+it should be contained in id section of features under this yaml file.</p>
+
 </td>
 <td>
 No
