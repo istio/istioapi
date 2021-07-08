@@ -1069,10 +1069,10 @@ message LocalityLoadBalancerSetting{
     // This is to support traffic fail over across different group of endpoints.
     // Suppose there are total N keys specified:
     //
-    //   1. endpoints match topologyKeys[0:-1] with downstream proxy have priority P(0).
-    //   2. endpoints match topologyKeys[0:-2] with downstream proxy have priority P(1).
-    //   3. by analogy, endpoints match topologyKeys[0:-N+1] with downstream proxy have priority P(N-1).
-    //   4. endpoints match no keys have priority P(N).
+    // 1. endpoints match topologyKeys[0:-1] with downstream proxy have priority P(0).
+    // 2. endpoints match topologyKeys[0:-2] with downstream proxy have priority P(1).
+    // 3. by analogy, endpoints match topologyKeys[0:-N+1] with downstream proxy have priority P(N-1).
+    // 4. endpoints match no keys have priority P(N).
     //
     // It can be any label specified on both client and server workload, also some special labels `topology.istio.io/network`, `topology.kubernetes.io/region`,
     // `topology.kubernetes.io/zone` and `topology.istio.io/subzone` are supported.
@@ -1083,11 +1083,12 @@ message LocalityLoadBalancerSetting{
     //
     // The below topology config indicates the following priority levels:
     // 
-    //   1. endpoints match same [network, region, zone, subzone] attributes with the client proxy have the highest priority.
-    //   2. endpoints have same [network, region, zone] but different [subzone] attributes with the client proxy have the secondary-level priority.
-    //   3. endpoints have same [network, region] but different [zone, subzone] attributes with the client proxy have the third-level priority.
-    //   4. endpoints have same [network] but different [region, zone, subzone] attributes with the client proxy have the third-level priority.
-    //   5. all the other endpoints that does not match any key have the lowest priority.
+    // 1. endpoints match same [network, region, zone, subzone] attributes with the client proxy have the highest priority.
+    // 2. endpoints have same [network, region, zone] but different [subzone] attributes with the client proxy have the secondary-level priority.
+    // 3. endpoints have same [network, region] but different [zone, subzone] attributes with the client proxy have the third-level priority.
+    // 4. endpoints have same [network] but different [region, zone, subzone] attributes with the client proxy have the third-level priority.
+    // 5. all the other endpoints that does not match any key have the lowest priority.
+    //
     // ```yaml
     // topologyKeys:
     // - "topology.istio.io/network"
