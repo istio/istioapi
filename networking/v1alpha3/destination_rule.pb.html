@@ -1199,11 +1199,14 @@ Suppose there are total N keys specified:</p>
 </ol>
 
 <p>It can be any label specified on both client and server workload, also some special labels <code>topology.istio.io/network</code>, <code>topology.kubernetes.io/region</code>,
-<code>topology.kubernetes.io/zone</code> and <code>topology.istio.io/subzone</code> are supported.
-  - <code>topology.istio.io/network</code> is used to match the network metadata of an endpoint, which can be specified by pod/namespace label <code>topology.istio.io/network</code>, sidecar env <code>ISTIO_META_NETWORK</code> or MeshNetworks.
-  - <code>topology.kubernetes.io/region</code> is used to match the region metadata of an endpoint, which maps to Kubernetes node label <code>topology.kubernetes.io/region</code> or the deprecated label <code>failure-domain.beta.kubernetes.io/region</code>.
-  - <code>topology.kubernetes.io/zone</code> is used to match the zone metadata of an endpoint, which maps to Kubernetes node label <code>topology.kubernetes.io/zone</code> or the deprecated label <code>failure-domain.beta.kubernetes.io/zone</code>.
-  - <code>topology.istio.io/subzone</code> is used to match the subzone metadata of an endpoint, which maps to Istio node label <code>topology.istio.io/subzone</code>.</p>
+<code>topology.kubernetes.io/zone</code> and <code>topology.istio.io/subzone</code> are supported.</p>
+
+<ul>
+<li><code>topology.istio.io/network</code> is used to match the network metadata of an endpoint, which can be specified by pod/namespace label <code>topology.istio.io/network</code>, sidecar env <code>ISTIO_META_NETWORK</code> or MeshNetworks.</li>
+<li><code>topology.kubernetes.io/region</code> is used to match the region metadata of an endpoint, which maps to Kubernetes node label <code>topology.kubernetes.io/region</code> or the deprecated label <code>failure-domain.beta.kubernetes.io/region</code>.</li>
+<li><code>topology.kubernetes.io/zone</code> is used to match the zone metadata of an endpoint, which maps to Kubernetes node label <code>topology.kubernetes.io/zone</code> or the deprecated label <code>failure-domain.beta.kubernetes.io/zone</code>.</li>
+<li><code>topology.istio.io/subzone</code> is used to match the subzone metadata of an endpoint, which maps to Istio node label <code>topology.istio.io/subzone</code>.</li>
+</ul>
 
 <p>The below topology config indicates the following priority levels:</p>
 

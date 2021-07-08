@@ -1076,6 +1076,7 @@ message LocalityLoadBalancerSetting{
     //
     // It can be any label specified on both client and server workload, also some special labels `topology.istio.io/network`, `topology.kubernetes.io/region`,
     // `topology.kubernetes.io/zone` and `topology.istio.io/subzone` are supported.
+    //
     //   - `topology.istio.io/network` is used to match the network metadata of an endpoint, which can be specified by pod/namespace label `topology.istio.io/network`, sidecar env `ISTIO_META_NETWORK` or MeshNetworks.
     //   - `topology.kubernetes.io/region` is used to match the region metadata of an endpoint, which maps to Kubernetes node label `topology.kubernetes.io/region` or the deprecated label `failure-domain.beta.kubernetes.io/region`.
     //   - `topology.kubernetes.io/zone` is used to match the zone metadata of an endpoint, which maps to Kubernetes node label `topology.kubernetes.io/zone` or the deprecated label `failure-domain.beta.kubernetes.io/zone`.
