@@ -381,7 +381,7 @@
             }
           },
           "topologyKeys": {
-            "description": "TopologyKeys is a preference-order list of topology keys used to sort endpoints to do priority load balancing. This is to support traffic fail over across different group of endpoints. Suppose there are total N keys specified: 1. endpoints match topologyKeys[0:-1] with downstream proxy have priority P(0). 2. endpoints match topologyKeys[0:-2] with downstream proxy have priority P(1). 3. by analogy, endpoints match topologyKeys[0:-N+1] with downstream proxy have priority P(N-1). 4. endpoints match no keys have priority P(N).",
+            "description": "TopologyKeys is a list of topology keys in the order provided, used to sort endpoints to do priority load balancing. This is to support traffic fail over across different group of endpoints. Suppose there are total N keys specified: 1. endpoints match topologyKeys[0:N] with downstream proxy have priority P(0). 2. endpoints match topologyKeys[0:N-1] with downstream proxy have priority P(1). 3. by analogy, endpoints match topologyKeys[0:1] with downstream proxy have priority P(N-1). 4. endpoints match no keys have priority P(N).",
             "type": "array",
             "items": {
               "type": "string"

@@ -255,9 +255,9 @@ spec:
                                     type: object
                                   type: array
                                 topologyKeys:
-                                  description: TopologyKeys is a preference-order
-                                    list of topology keys used to sort endpoints to
-                                    do priority load balancing.
+                                  description: TopologyKeys is a list of topology
+                                    keys in the order provided, used to sort endpoints
+                                    to do priority load balancing.
                                   items:
                                     type: string
                                   type: array
@@ -502,9 +502,9 @@ spec:
                                           type: object
                                         type: array
                                       topologyKeys:
-                                        description: TopologyKeys is a preference-order
-                                          list of topology keys used to sort endpoints
-                                          to do priority load balancing.
+                                        description: TopologyKeys is a list of topology
+                                          keys in the order provided, used to sort
+                                          endpoints to do priority load balancing.
                                         items:
                                           type: string
                                         type: array
@@ -811,8 +811,8 @@ spec:
                               type: object
                             type: array
                           topologyKeys:
-                            description: TopologyKeys is a preference-order list of
-                              topology keys used to sort endpoints to do priority
+                            description: TopologyKeys is a list of topology keys in
+                              the order provided, used to sort endpoints to do priority
                               load balancing.
                             items:
                               type: string
@@ -1053,9 +1053,9 @@ spec:
                                     type: object
                                   type: array
                                 topologyKeys:
-                                  description: TopologyKeys is a preference-order
-                                    list of topology keys used to sort endpoints to
-                                    do priority load balancing.
+                                  description: TopologyKeys is a list of topology
+                                    keys in the order provided, used to sort endpoints
+                                    to do priority load balancing.
                                   items:
                                     type: string
                                   type: array
@@ -1411,9 +1411,9 @@ spec:
                                     type: object
                                   type: array
                                 topologyKeys:
-                                  description: TopologyKeys is a preference-order
-                                    list of topology keys used to sort endpoints to
-                                    do priority load balancing.
+                                  description: TopologyKeys is a list of topology
+                                    keys in the order provided, used to sort endpoints
+                                    to do priority load balancing.
                                   items:
                                     type: string
                                   type: array
@@ -1658,9 +1658,9 @@ spec:
                                           type: object
                                         type: array
                                       topologyKeys:
-                                        description: TopologyKeys is a preference-order
-                                          list of topology keys used to sort endpoints
-                                          to do priority load balancing.
+                                        description: TopologyKeys is a list of topology
+                                          keys in the order provided, used to sort
+                                          endpoints to do priority load balancing.
                                         items:
                                           type: string
                                         type: array
@@ -1967,8 +1967,8 @@ spec:
                               type: object
                             type: array
                           topologyKeys:
-                            description: TopologyKeys is a preference-order list of
-                              topology keys used to sort endpoints to do priority
+                            description: TopologyKeys is a list of topology keys in
+                              the order provided, used to sort endpoints to do priority
                               load balancing.
                             items:
                               type: string
@@ -2209,9 +2209,9 @@ spec:
                                     type: object
                                   type: array
                                 topologyKeys:
-                                  description: TopologyKeys is a preference-order
-                                    list of topology keys used to sort endpoints to
-                                    do priority load balancing.
+                                  description: TopologyKeys is a list of topology
+                                    keys in the order provided, used to sort endpoints
+                                    to do priority load balancing.
                                   items:
                                     type: string
                                   type: array

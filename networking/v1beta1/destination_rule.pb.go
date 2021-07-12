@@ -2006,17 +2006,17 @@ type LocalityLoadBalancerSetting struct {
 	// Should be used together with OutlierDetection to detect unhealthy endpoints.
 	// Note: if no OutlierDetection specified, this will not take effect.
 	Failover []*LocalityLoadBalancerSetting_Failover `protobuf:"bytes,2,rep,name=failover,proto3" json:"failover,omitempty"`
-	// TopologyKeys is a preference-order list of topology keys used to sort endpoints to do priority load balancing.
+	// TopologyKeys is a list of topology keys in the order provided, used to sort endpoints to do priority load balancing.
 	// This is to support traffic fail over across different group of endpoints.
 	// Suppose there are total N keys specified:
 	//
-	// 1. endpoints match topologyKeys[0:-1] with downstream proxy have priority P(0).
-	// 2. endpoints match topologyKeys[0:-2] with downstream proxy have priority P(1).
-	// 3. by analogy, endpoints match topologyKeys[0:-N+1] with downstream proxy have priority P(N-1).
+	// 1. endpoints match topologyKeys[0:N] with downstream proxy have priority P(0).
+	// 2. endpoints match topologyKeys[0:N-1] with downstream proxy have priority P(1).
+	// 3. by analogy, endpoints match topologyKeys[0:1] with downstream proxy have priority P(N-1).
 	// 4. endpoints match no keys have priority P(N).
 	//
-	// It can be any label specified on both client and server workload, also some special labels `topology.istio.io/network`, `topology.kubernetes.io/region`,
-	// `topology.kubernetes.io/zone` and `topology.istio.io/subzone` are supported.
+	// It can be any label specified on both client and server workload.
+	// The following special labels are also supported:
 	//
 	//   - `topology.istio.io/network` is used to match the network metadata of an endpoint, which can be specified by pod/namespace label `topology.istio.io/network`, sidecar env `ISTIO_META_NETWORK` or MeshNetworks.
 	//   - `topology.kubernetes.io/region` is used to match the region metadata of an endpoint, which maps to Kubernetes node label `topology.kubernetes.io/region` or the deprecated label `failure-domain.beta.kubernetes.io/region`.

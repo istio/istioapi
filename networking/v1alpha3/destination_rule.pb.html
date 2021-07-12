@@ -1187,19 +1187,19 @@ No
 <td><code>topologyKeys</code></td>
 <td><code>string[]</code></td>
 <td>
-<p>TopologyKeys is a preference-order list of topology keys used to sort endpoints to do priority load balancing.
+<p>TopologyKeys is a list of topology keys in the order provided, used to sort endpoints to do priority load balancing.
 This is to support traffic fail over across different group of endpoints.
 Suppose there are total N keys specified:</p>
 
 <ol>
-<li>endpoints match topologyKeys[0:-1] with downstream proxy have priority P(0).</li>
-<li>endpoints match topologyKeys[0:-2] with downstream proxy have priority P(1).</li>
-<li>by analogy, endpoints match topologyKeys[0:-N+1] with downstream proxy have priority P(N-1).</li>
+<li>endpoints match topologyKeys[0:N] with downstream proxy have priority P(0).</li>
+<li>endpoints match topologyKeys[0:N-1] with downstream proxy have priority P(1).</li>
+<li>by analogy, endpoints match topologyKeys[0:1] with downstream proxy have priority P(N-1).</li>
 <li>endpoints match no keys have priority P(N).</li>
 </ol>
 
-<p>It can be any label specified on both client and server workload, also some special labels <code>topology.istio.io/network</code>, <code>topology.kubernetes.io/region</code>,
-<code>topology.kubernetes.io/zone</code> and <code>topology.istio.io/subzone</code> are supported.</p>
+<p>It can be any label specified on both client and server workload.
+The following special labels are also supported:</p>
 
 <ul>
 <li><code>topology.istio.io/network</code> is used to match the network metadata of an endpoint, which can be specified by pod/namespace label <code>topology.istio.io/network</code>, sidecar env <code>ISTIO_META_NETWORK</code> or MeshNetworks.</li>
