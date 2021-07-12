@@ -33,10 +33,10 @@ extend google.protobuf.FieldOptions {
 // Repo PR: https://github.com/istio/enhancements/pull/88
 message IstioFeature {
 	// label the feature's status, available status values may be alpha, beta and stable 
-	// there woulbe be experimental in future.
+	// there would be experimental in future.
 	optional string status = 1;
 	// show the feature field for specified resource, such as vs-export-to shows the virtualservice's field export_to,
-	// it can be defined by feature ownner.
+	// it can be defined by feature owner.
 	optional string name = 2;
 	// id means the feature id which can be mapped here: https://github.com/istio/enhancements/blob/master/features.yaml
 	// it should be contained in id section of features under this yaml file.
