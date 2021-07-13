@@ -378,7 +378,7 @@ var (
                         "automatically injected into the workload.",
 		FeatureStatus: Beta,
 		Hidden:        false,
-		Deprecated:    false,
+		Deprecated:    true,
 		Resources: []ResourceTypes{
 			Pod,
 		},
