@@ -220,8 +220,8 @@ spec:
                             localityLbSetting:
                               properties:
                                 distribute:
-                                  description: 'Optional: only one of distribute or
-                                    failover can be set.'
+                                  description: 'Optional: only one of distribute,
+                                    failover or topologyKeys can be set.'
                                   items:
                                     properties:
                                       from:
@@ -243,8 +243,8 @@ spec:
                                   nullable: true
                                   type: boolean
                                 failover:
-                                  description: 'Optional: only failover or distribute
-                                    can be set.'
+                                  description: 'Optional: only one of distribute,
+                                    failover or topologyKeys can be set.'
                                   items:
                                     properties:
                                       from:
@@ -253,6 +253,13 @@ spec:
                                       to:
                                         type: string
                                     type: object
+                                  type: array
+                                topologyKeys:
+                                  description: TopologyKeys is a list of topology
+                                    keys in the order provided, used to sort endpoints
+                                    to do priority load balancing.
+                                  items:
+                                    type: string
                                   type: array
                               type: object
                             simple:
@@ -460,8 +467,8 @@ spec:
                                   localityLbSetting:
                                     properties:
                                       distribute:
-                                        description: 'Optional: only one of distribute
-                                          or failover can be set.'
+                                        description: 'Optional: only one of distribute,
+                                          failover or topologyKeys can be set.'
                                         items:
                                           properties:
                                             from:
@@ -483,8 +490,8 @@ spec:
                                         nullable: true
                                         type: boolean
                                       failover:
-                                        description: 'Optional: only failover or distribute
-                                          can be set.'
+                                        description: 'Optional: only one of distribute,
+                                          failover or topologyKeys can be set.'
                                         items:
                                           properties:
                                             from:
@@ -493,6 +500,13 @@ spec:
                                             to:
                                               type: string
                                           type: object
+                                        type: array
+                                      topologyKeys:
+                                        description: TopologyKeys is a list of topology
+                                          keys in the order provided, used to sort
+                                          endpoints to do priority load balancing.
+                                        items:
+                                          type: string
                                         type: array
                                     type: object
                                   simple:
@@ -763,8 +777,8 @@ spec:
                       localityLbSetting:
                         properties:
                           distribute:
-                            description: 'Optional: only one of distribute or failover
-                              can be set.'
+                            description: 'Optional: only one of distribute, failover
+                              or topologyKeys can be set.'
                             items:
                               properties:
                                 from:
@@ -785,8 +799,8 @@ spec:
                             nullable: true
                             type: boolean
                           failover:
-                            description: 'Optional: only failover or distribute can
-                              be set.'
+                            description: 'Optional: only one of distribute, failover
+                              or topologyKeys can be set.'
                             items:
                               properties:
                                 from:
@@ -795,6 +809,13 @@ spec:
                                 to:
                                   type: string
                               type: object
+                            type: array
+                          topologyKeys:
+                            description: TopologyKeys is a list of topology keys in
+                              the order provided, used to sort endpoints to do priority
+                              load balancing.
+                            items:
+                              type: string
                             type: array
                         type: object
                       simple:
@@ -997,8 +1018,8 @@ spec:
                             localityLbSetting:
                               properties:
                                 distribute:
-                                  description: 'Optional: only one of distribute or
-                                    failover can be set.'
+                                  description: 'Optional: only one of distribute,
+                                    failover or topologyKeys can be set.'
                                   items:
                                     properties:
                                       from:
@@ -1020,8 +1041,8 @@ spec:
                                   nullable: true
                                   type: boolean
                                 failover:
-                                  description: 'Optional: only failover or distribute
-                                    can be set.'
+                                  description: 'Optional: only one of distribute,
+                                    failover or topologyKeys can be set.'
                                   items:
                                     properties:
                                       from:
@@ -1030,6 +1051,13 @@ spec:
                                       to:
                                         type: string
                                     type: object
+                                  type: array
+                                topologyKeys:
+                                  description: TopologyKeys is a list of topology
+                                    keys in the order provided, used to sort endpoints
+                                    to do priority load balancing.
+                                  items:
+                                    type: string
                                   type: array
                               type: object
                             simple:
@@ -1348,8 +1376,8 @@ spec:
                             localityLbSetting:
                               properties:
                                 distribute:
-                                  description: 'Optional: only one of distribute or
-                                    failover can be set.'
+                                  description: 'Optional: only one of distribute,
+                                    failover or topologyKeys can be set.'
                                   items:
                                     properties:
                                       from:
@@ -1371,8 +1399,8 @@ spec:
                                   nullable: true
                                   type: boolean
                                 failover:
-                                  description: 'Optional: only failover or distribute
-                                    can be set.'
+                                  description: 'Optional: only one of distribute,
+                                    failover or topologyKeys can be set.'
                                   items:
                                     properties:
                                       from:
@@ -1381,6 +1409,13 @@ spec:
                                       to:
                                         type: string
                                     type: object
+                                  type: array
+                                topologyKeys:
+                                  description: TopologyKeys is a list of topology
+                                    keys in the order provided, used to sort endpoints
+                                    to do priority load balancing.
+                                  items:
+                                    type: string
                                   type: array
                               type: object
                             simple:
@@ -1588,8 +1623,8 @@ spec:
                                   localityLbSetting:
                                     properties:
                                       distribute:
-                                        description: 'Optional: only one of distribute
-                                          or failover can be set.'
+                                        description: 'Optional: only one of distribute,
+                                          failover or topologyKeys can be set.'
                                         items:
                                           properties:
                                             from:
@@ -1611,8 +1646,8 @@ spec:
                                         nullable: true
                                         type: boolean
                                       failover:
-                                        description: 'Optional: only failover or distribute
-                                          can be set.'
+                                        description: 'Optional: only one of distribute,
+                                          failover or topologyKeys can be set.'
                                         items:
                                           properties:
                                             from:
@@ -1621,6 +1656,13 @@ spec:
                                             to:
                                               type: string
                                           type: object
+                                        type: array
+                                      topologyKeys:
+                                        description: TopologyKeys is a list of topology
+                                          keys in the order provided, used to sort
+                                          endpoints to do priority load balancing.
+                                        items:
+                                          type: string
                                         type: array
                                     type: object
                                   simple:
@@ -1891,8 +1933,8 @@ spec:
                       localityLbSetting:
                         properties:
                           distribute:
-                            description: 'Optional: only one of distribute or failover
-                              can be set.'
+                            description: 'Optional: only one of distribute, failover
+                              or topologyKeys can be set.'
                             items:
                               properties:
                                 from:
@@ -1913,8 +1955,8 @@ spec:
                             nullable: true
                             type: boolean
                           failover:
-                            description: 'Optional: only failover or distribute can
-                              be set.'
+                            description: 'Optional: only one of distribute, failover
+                              or topologyKeys can be set.'
                             items:
                               properties:
                                 from:
@@ -1923,6 +1965,13 @@ spec:
                                 to:
                                   type: string
                               type: object
+                            type: array
+                          topologyKeys:
+                            description: TopologyKeys is a list of topology keys in
+                              the order provided, used to sort endpoints to do priority
+                              load balancing.
+                            items:
+                              type: string
                             type: array
                         type: object
                       simple:
@@ -2125,8 +2174,8 @@ spec:
                             localityLbSetting:
                               properties:
                                 distribute:
-                                  description: 'Optional: only one of distribute or
-                                    failover can be set.'
+                                  description: 'Optional: only one of distribute,
+                                    failover or topologyKeys can be set.'
                                   items:
                                     properties:
                                       from:
@@ -2148,8 +2197,8 @@ spec:
                                   nullable: true
                                   type: boolean
                                 failover:
-                                  description: 'Optional: only failover or distribute
-                                    can be set.'
+                                  description: 'Optional: only one of distribute,
+                                    failover or topologyKeys can be set.'
                                   items:
                                     properties:
                                       from:
@@ -2158,6 +2207,13 @@ spec:
                                       to:
                                         type: string
                                     type: object
+                                  type: array
+                                topologyKeys:
+                                  description: TopologyKeys is a list of topology
+                                    keys in the order provided, used to sort endpoints
+                                    to do priority load balancing.
+                                  items:
+                                    type: string
                                   type: array
                               type: object
                             simple:
