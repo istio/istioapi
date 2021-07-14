@@ -219,6 +219,7 @@
           "verifyCertificateAtClient": {
             "description": "`VerifyCertificateAtClient` sets the mesh global default for peer certificate validation at the client-side proxy when `SIMPLE` TLS or `MUTUAL` TLS (non `ISTIO_MUTUAL`) origination modes are used. This setting can be overridden at the host level via DestinationRule API. By default, `VerifyCertificateAtClient` is `true`.",
             "type": "boolean",
+            "deprecated": true,
             "nullable": true
           },
           "ca": {
@@ -1687,6 +1688,11 @@
           "sni": {
             "description": "SNI string to present to the server during TLS handshake.",
             "type": "string"
+          },
+          "insecureSkipVerify": {
+            "description": "Boolean specifying if the proxy should not check the CA signature and SAN for the server certificate corresponding to the host. `InsecureSkipVerify` is `false` by default. If set to true, the proxy will skip verification of the server certificate, regardless of any certificate validation configureation provided elsewhere.",
+            "type": "boolean",
+            "nullable": true
           }
         }
       },
